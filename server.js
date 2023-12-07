@@ -17,7 +17,7 @@ const corsOptions = {
 app.use(cors())
 
 const db = 'mongodb+srv://zaq1234rfv:zaq1234rfv@cluster0.noj0vsj.mongodb.net/?retryWrites=true&w=majority'
-
+const port = process.env.PORT || 3000
 async function startServer() {
   try {
     // Connect to MongoDB
@@ -25,7 +25,7 @@ async function startServer() {
     console.log('Connected to DB');
 
     // Start Express server
-    app.listen(3001, () => {
+    app.listen(port, () => {
       console.log('Listening to port 3001');
     });
   } catch (error) {
