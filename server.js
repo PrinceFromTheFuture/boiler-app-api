@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 
 
-const db = 'mongodb+srv://zaq1234rfv:zaq1234rfv@cluster0.noj0vsj.mongodb.net/yourdbname?retryWrites=true&w=majority&poolSize=10';
+const db = 'mongodb+srv://zaq1234rfv:zaq1234rfv@cluster0.noj0vsj.mongodb.net/yourdbname?retryWrites=true&w=majority';
 
 const port = process.env.PORT || 3000
 async function startServer() {
