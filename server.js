@@ -18,12 +18,13 @@ app.use(bodyParser.json());
 
 
 
-const db = 'mongodb+srv://zaq1234rfv:zaq1234rfv@cluster0.noj0vsj.mongodb.net/?retryWrites=true&w=majority'
+const db = 'mongodb+srv://zaq1234rfv:zaq1234rfv@cluster0.noj0vsj.mongodb.net/yourdbname?retryWrites=true&w=majority&poolSize=10';
+
 const port = process.env.PORT || 3000
 async function startServer() {
   try {
     // Connect to MongoDB
-    await mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, poolSize: 7});
+    await mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, });
     console.log('Connected to DB');
 
     // Start Express server
