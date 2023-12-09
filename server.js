@@ -6,22 +6,24 @@ const cors = require('cors')
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-
 const corsOptions = {
     origin: 'https://boiler-app.onrender.com/',
     optionsSuccessStatus: 200,
 };
 app.use(cors())
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+
+
 const db = 'mongodb+srv://zaq1234rfv:zaq1234rfv@cluster0.noj0vsj.mongodb.net/?retryWrites=true&w=majority'
 const port = process.env.PORT || 3000
 async function startServer() {
   try {
     // Connect to MongoDB
-    await mongoose.connect(db);
+    await mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, poolSize: 7});
     console.log('Connected to DB');
 
     // Start Express server
