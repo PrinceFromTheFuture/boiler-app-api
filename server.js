@@ -24,7 +24,7 @@ const port = process.env.PORT || 3000
 async function startServer() {
   try {
     // Connect to MongoDB
-    await mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, });
+    await mongoose.connect(db);
     console.log('Connected to DB');
 
     // Start Express server
@@ -37,9 +37,16 @@ async function startServer() {
 }
 
 app.get('/users', async(req,res) =>{
+  
+  try{
 
     const users = await userModel.find()
+    console.log(users)
     res.send(users)
+  }catch(e){
+    console.log(e)
+    res.send(e)
+  }
    
 })
 
