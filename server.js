@@ -38,18 +38,14 @@ async function startServer() {
 
 app.get('/users', async(req,res) =>{
   
-  try{
+
 
     const users = await userModel.find()
     console.log(users)
     res.send(users)
-  }catch(e){
-    console.log(e)
-    res.send(e)
-  }
+
    
 })
-
 app.post('/update-user-state', async (req, res) =>{
     const filter = {name: req.body.name}
     const update = {isActive: req.body.isActive}
