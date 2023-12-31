@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 
 const corsOptions = {
-    origin: 'https://boiler-app.onrender.com/',
+    origin: 'https://boiler-app.onrender.com',
     optionsSuccessStatus: 200,
 };
 app.use(cors())

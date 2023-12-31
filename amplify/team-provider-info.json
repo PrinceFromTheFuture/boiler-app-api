@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-boilerappapi-staging-213201-authRole",
+      "UnauthRoleArn": "arn:aws:iam::754306542383:role/amplify-boilerappapi-staging-213201-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::754306542383:role/amplify-boilerappapi-staging-213201-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-boilerappapi-staging-213201-deployment",
+      "UnauthRoleName": "amplify-boilerappapi-staging-213201-unauthRole",
+      "StackName": "amplify-boilerappapi-staging-213201",
+      "StackId": "arn:aws:cloudformation:eu-north-1:754306542383:stack/amplify-boilerappapi-staging-213201/63e0fc30-96da-11ee-9d15-06cff14a5aa4",
+      "AmplifyAppId": "dm5l52of1s3hp"
+    }
+  }
+}
